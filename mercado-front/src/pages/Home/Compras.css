@@ -1,0 +1,302 @@
+/* Container geral da tela de compras */
+.compras-tela-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+/* Campo de CPF */
+.cpf-tela-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.cpf-tela-section input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Botão de buscar cliente */
+.cpf-tela-section button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cpf-tela-section button:hover {
+  background-color: #0056b3;
+}
+
+/* Tabela de produtos */
+.tela-produtos-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tela-produtos-table th,
+.tela-produtos-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Títulos das categorias maiores */
+.tela-produtos-table th {
+  background-color: #007bff;
+  color: white;
+  font-size: 18px; /* Aumentando o tamanho dos títulos */
+  text-align: center;
+}
+
+/* Padronização dos campos da tabela */
+.tela-produtos-table td {
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Centralizar botão adicionar */
+.tela-produtos-table td button {
+  background-color: #28a745;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5px auto;
+  display: block; /* Centraliza o botão */
+}
+
+.tela-produtos-table td button:hover {
+  background-color: #218838;
+}
+
+/* Seção do carrinho */
+.carrinho-tela {
+  margin-top: 20px;
+}
+
+.carrinho-tela h4 {
+  margin-bottom: 10px;
+}
+
+.carrinho-tela ul {
+  list-style: none;
+  padding: 0;
+}
+
+.carrinho-tela li {
+  background: #fff;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+/* Total e botão de finalizar compra */
+.total-tela-section {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.finalizar-tela-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.finalizar-tela-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Lista de compras do cliente */
+.compras-tela-list {
+  margin-top: 20px;
+}
+
+.compras-tela-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.compras-tela-list li {
+  background: #fff;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.compras-tela-list button {
+  background-color: #dc3545;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.compras-tela-list button:hover {
+  background-color: #a71d2a;
+}
+
+/* Categoria da seção de produtos */
+.categoria-tela {
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #007bff;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 2px solid #007bff;
+  letter-spacing: 1px;
+}
+/* Lista de compras do cliente */
+.compras-tela-list {
+  margin-top: 20px;
+}
+
+.compras-tela-list h4 {
+  font-size: 24px;
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.compras-tela-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.compras-tela-list li {
+  background: #fff;
+  margin: 5px 0;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.compra-info {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.compra-produtos {
+  font-size: 16px;
+  color: #333;
+}
+
+.compra-total {
+  font-size: 16px;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.compras-tela-list button {
+  background-color: #dc3545;
+  padding: 8px 15px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.compras-tela-list button:hover {
+  background-color: #a71d2a;
+}
+/* Botão adicionar ao carrinho */
+.tela-produtos-table td button {
+  background-color: #28a745;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5px auto;
+  display: block; /* Centraliza o botão */
+}
+
+.tela-produtos-table td button:hover {
+  background-color: #218838;
+}
+
+.tela-produtos-table td button:active {
+  background-color: #1e7e34; /* Cor mais escura quando pressionado */
+}
+.Adicionar {
+  background-color: #28a745; /* Cor inicial */
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.1s ease, box-shadow 0.1s ease, transform 0.1s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras para dar profundidade */
+}
+
+.Adicionar:hover {
+  background-color: #218838; /* Cor quando o mouse passar */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombra mais forte ao passar o mouse */
+}
+
+.Adicionar:active {
+  background-color: #0b4418; /* Cor mais escura quando pressionado */
+  transform: translateY(2px); /* Dá a sensação de afundamento */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra mais suave ao clicar */
+}
+
+.remover:hover{
+background-color: #a71d2a
+}
+
+.estoque-esgotado {
+  color: red;
+  font-weight: bold;
+
+}
+
+.remover-do-carrinho {
+  font-size: 12px; /* Diminui o tamanho da fonte */
+  padding: 3px 6px; /* Reduz o padding */
+  background-color: #f44336; /* Cor de fundo vermelha */
+  color: white; /* Cor do texto branca */
+  border: none; /* Sem borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de ponteiro */
+  transition: background-color 0.3s ease;
+}
+
+.remover-do-carrinho:hover {
+  background-color: #d32f2f; /* Cor de fundo mais escura ao passar o mouse */
+}

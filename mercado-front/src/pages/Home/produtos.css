@@ -1,0 +1,72 @@
+/* src/pages/Home/produtos.css */
+html {
+  scroll-behavior: smooth;
+}
+
+
+.produtos-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+   
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 35px
+  }
+  
+  .produtos-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .produtos-table th, .produtos-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .produtos-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .produtos-table td {
+    background-color: #fff;
+    color: #555;
+  }
+  
+  .produtos-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .categoria-title {
+    background-color: #f8f8f8;
+    font-weight: bold;
+    text-align: left;  /* Alinhando à esquerda */
+    padding-left: 20px; /* Adicionando um pouco de espaçamento à esquerda */
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .produtos-table td:last-child {
+    text-align: center;
+    
+  }
+  
+  .produtos-table td, .produtos-table th {
+    padding: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .produtos-table th, .produtos-table td {
+      padding: 10px;
+    }
+  }

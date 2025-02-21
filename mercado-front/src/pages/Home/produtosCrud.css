@@ -1,0 +1,96 @@
+/* Produtos CRUD - Container */
+.produtos-crud-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Título */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Campos do formulário */
+form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Botão do formulário */
+form button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Botões gerais */
+button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Tabela de Produtos */
+.produtos-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.produtos-table th,
+.produtos-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.produtos-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.produtos-table td {
+  background-color: #fff;
+}
+
+.produtos-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Botões de Ação na Tabela */
+.edit-btn {
+  background-color: #28a745;
+  color: white;
+  margin-right: 5px;
+}
+
+.delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+/* Botão de Cancelar */
+.cancel-btn {
+  background-color: #666;
+  color: white;
+}

@@ -1,0 +1,20 @@
+{
+  "name": "api-mercadinho",
+  "version": "1.0.0",
+  "description": "Criação de uma api de mercado.",
+  "license": "ISC",
+  "author": "Theo Padilha",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "dev": "node --watch .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "joi": "^17.13.3",
+    "pg": "^8.13.2"
+  }
+}

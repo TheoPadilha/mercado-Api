@@ -1,0 +1,182 @@
+/* Container geral */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+/* Barra de navegação */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #007bff;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #0056b3;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Estilo dos inputs */
+input {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+td button {
+  background-color: #dc3545;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin:1px 5px;
+}
+
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Conteúdo do modal */
+.modal-content {
+  background-color: white;
+  padding: 30px;  /* Aumentei o padding */
+  border-radius: 8px;
+  width: 400px;  /* Aumentei a largura */
+  max-width: 90%;
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Inputs do modal */
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Botões do modal */
+.modal-content button {
+  width: 48%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 1%;
+}
+
+/* Botão de confirmar edição (verde) */
+.modal-content button:first-of-type {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Botão de cancelar (vermelho) */
+.modal-content button:last-of-type , .Excluir{
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Hover nos botões */
+.modal-content button:hover {
+  opacity: 0.8;
+}
+
+
+.editar-btn {
+  background-color: #28a745; /* Verde */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.editar-btn:hover {
+  background-color: #218838;
+}
+
+.Excluir:hover{
+  background-color: #a71d2a;
+}
