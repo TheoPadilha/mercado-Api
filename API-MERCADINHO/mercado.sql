@@ -1,6 +1,3 @@
--- Habilita a função gen_random_uuid() (se necessário)
-CREATE EXTENSION IF NOT EXISTS pgcrypto;
-
 
 -- Table: public.categorias
 CREATE TABLE IF NOT EXISTS public.categorias
