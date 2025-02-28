@@ -1,109 +1,50 @@
+-- Tabela de Categorias
+CREATE TABLE categorias (
+    id SERIAL PRIMARY KEY,
+    nome TEXT NOT NULL
+);
 
--- Table: public.categorias
-CREATE TABLE IF NOT EXISTS public.categorias
-(
-    id integer NOT NULL DEFAULT nextval('categorias_id_seq'::regclass),
-    nome text COLLATE pg_catalog."default" NOT NULL,
-    CONSTRAINT categorias_pkey PRIMARY KEY (id),
-    CONSTRAINT categorias_nome_key UNIQUE (nome)
-)
+-- Tabela de Clientes
+CREATE TABLE clientes (
+    id SERIAL PRIMARY KEY,
+    nome TEXT NOT NULL,
+    cpf TEXT NOT NULL UNIQUE
+);
 
-TABLESPACE pg_default;
+-- Tabela de Compras
+CREATE TABLE compra (
+    id SERIAL PRIMARY KEY,
+    compra_date TIMESTAMP WITHOUT TIME ZONE NOT NULL,
+    cliente_id INTEGER NOT NULL,
+    CONSTRAINT fk_cliente FOREIGN KEY (cliente_id) REFERENCES clientes(id) ON DELETE CASCADE
+);
 
-ALTER TABLE IF EXISTS public.categorias
-    OWNER to postgres;
+-- Tabela de Produtos
+CREATE TABLE produtos (
+    id SERIAL PRIMARY KEY,
+    nome TEXT NOT NULL,
+    quantidade INTEGER NOT NULL,
+    categoria_id INTEGER NOT NULL,
+    preco NUMERIC(10,2) NOT NULL,
+    ativo BOOLEAN NOT NULL DEFAULT TRUE,
+    CONSTRAINT fk_categoria FOREIGN KEY (categoria_id) REFERENCES categorias(id) ON DELETE CASCADE
+);
 
+-- Tabela Produtocompra (Tabela de Junção entre Produtos, Clientes e Compras)
+CREATE TABLE produtocompra (
+    produto_id INTEGER NOT NULL,
+    cliente_id INTEGER NOT NULL,
+    compra_id INTEGER NOT NULL,
+    quantidade INTEGER NOT NULL,
+    preco NUMERIC(10,2) NOT NULL,
+    PRIMARY KEY (produto_id, cliente_id, compra_id),  -- Chave primária composta
+    CONSTRAINT fk_produto FOREIGN KEY (produto_id) REFERENCES produtos(id) ON DELETE CASCADE,
+    CONSTRAINT fk_cliente FOREIGN KEY (cliente_id) REFERENCES clientes(id) ON DELETE CASCADE,
+    CONSTRAINT fk_compra FOREIGN KEY (compra_id) REFERENCES compra(id) ON DELETE CASCADE
+);
 
-
-
--- Table: public.clientes
-CREATE TABLE IF NOT EXISTS public.clientes
-(
-    id integer NOT NULL DEFAULT nextval('clientes_id_seq'::regclass),
-    nome text COLLATE pg_catalog."default" NOT NULL,
-    cpf text COLLATE pg_catalog."default" NOT NULL,
-    CONSTRAINT clientes_pkey PRIMARY KEY (id),
-    CONSTRAINT clientes_cpf_key UNIQUE (cpf)
-)
-
-TABLESPACE pg_default;
-
-ALTER TABLE IF EXISTS public.clientes
-    OWNER to postgres;
-
-
-
-
--- Table: public.compra
-CREATE TABLE IF NOT EXISTS public.compra
-(
-    id integer NOT NULL DEFAULT nextval('compra_id_seq'::regclass),
-    compra_date timestamp without time zone NOT NULL,
-    cliente_id integer NOT NULL,
-    CONSTRAINT compra_pkey PRIMARY KEY (id),
-    CONSTRAINT fk_usuario FOREIGN KEY (cliente_id)
-        REFERENCES public.clientes (id) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
-)
-
-TABLESPACE pg_default;
-
-ALTER TABLE IF EXISTS public.compra
-    OWNER to postgres;
-
-
-
-
-
--- Table: public.produtocompra
-CREATE TABLE IF NOT EXISTS public.produtocompra
-(
-    produto_id integer NOT NULL,
-    quantidade integer NOT NULL,
-    cliente_id integer NOT NULL,
-    compra_id integer NOT NULL DEFAULT nextval('produtocompra_compra_id_temp_seq'::regclass),
-    categoria_id integer,
-    preco numeric(10,2),
-    CONSTRAINT produtocompra_pkey PRIMARY KEY (produto_id, cliente_id, compra_id),
-    CONSTRAINT fk_categoria FOREIGN KEY (categoria_id)
-        REFERENCES public.categorias (id) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION,
-    CONSTRAINT fk_cliente FOREIGN KEY (cliente_id)
-        REFERENCES public.clientes (id) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE CASCADE,
-    CONSTRAINT fk_produto FOREIGN KEY (produto_id)
-        REFERENCES public.produtos (id) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE CASCADE
-)
-
-TABLESPACE pg_default;
-
-ALTER TABLE IF EXISTS public.produtocompra
-    OWNER to postgres;
-
-
-
--- Table: public.produtos
-CREATE TABLE IF NOT EXISTS public.produtos
-(
-    id integer NOT NULL DEFAULT nextval('produtos_id_seq'::regclass),
-    nome text COLLATE pg_catalog."default" NOT NULL,
-    quantidade integer NOT NULL,
-    categoria_id integer,
-    preco numeric(10,2) NOT NULL,
-    ativo boolean DEFAULT true,
-    CONSTRAINT produtos_pkey PRIMARY KEY (id),
-    CONSTRAINT fk_categoria FOREIGN KEY (categoria_id)
-        REFERENCES public.categorias (id) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE SET NULL
-)
-
-TABLESPACE pg_default;
-
-ALTER TABLE IF EXISTS public.produtos
-    OWNER to postgres;
+select * from categorias
+select * from clientes
+select * from compra
+select * from produtocompra
+select * from produtos 
