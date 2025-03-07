@@ -867,15 +867,8 @@ app.post("/cliente/compra", async (req, res) => {
 
       // Insere o produto na tabela `produtocompra`, associando `cliente_id`, `compra_id` e outros dados
       await pool.query(
-        "INSERT INTO produtocompra (produto_id, quantidade, cliente_id, compra_id, categoria_id, preco) VALUES ($1, $2, $3, $4, $5, $6)",
-        [
-          produto.id,
-          quantidade,
-          cliente.id,
-          compraId,
-          produto.categoria_id,
-          produto.preco,
-        ]
+        "INSERT INTO produtocompra (produto_id, quantidade, cliente_id, compra_id, preco) VALUES ($1, $2, $3, $4, $5)",
+        [produto.id, quantidade, cliente.id, compraId, produto.preco]
       );
 
       // Atualiza o estoque do produto
