@@ -1,18 +1,20 @@
 Ola muito obrigado pela oportunidade de criar esse projeto .
 Este arquivo eh um guia basico de como rodar o projeto:
 
-- Na pasta API-MERCADINHO so irá precisar abrir o terminal e inserir : 'npm run dev' para funcionar .
-
-- Na pasta mercado-front vc precisará intalar o node_modules para funcionar corretamente ,use 'npm install' ou 'npm i' e em seguida o comando 'npm run dev'
-
-importante: Certifique-se de estar no diretório correto antes de rodar os comandos.(pois API-MERCADINHO ja tem node_modules)
-
-para utilizar o banco de dados deverá criar o arquivo .env usando :
-
+- Na pasta API-MERCADINHO irá precisar criar o arquivo .env depois dentro do arquivo coloque:
 DB_HOST=localhost
 DB_PORT=5432
 DB_USER=nome_usuario
 DB_PASSWORD=senha
 DB_DATABASE=nome_do_banco_de_dados
+
+troque as credenciais para as que vc utiliza.
+
+em seguida abrir o terminal e inserir : 'npm run dev' para funcionar .
+
+- Na pasta mercado-front vc precisará intalar o node_modules para funcionar corretamente ,use 'npm install' ou 'npm i' e em seguida o comando 'npm run dev'
+
+importante: Certifique-se de estar no diretório correto antes de rodar os comandos.(pois API-MERCADINHO ja tem node_modules)
+
 
 troque as credenciais para as que vc utiliza.
