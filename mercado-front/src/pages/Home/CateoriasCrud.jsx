@@ -20,27 +20,36 @@ const CategoriasCrud = () => {
   const carregarCategorias = async () => {
     try {
       const response = await getCategorias();
-      setCategorias(response);
+      console.log("Categorias recebidas da API:", response);
+      setCategorias(Array.isArray(response) ? response : []);
     } catch (error) {
       console.error("Erro ao carregar categorias:", error);
+      setCategorias([]);
     }
   };
 
   const validarNome = (nome) => {
+    console.log("Categorias no validarNome:", categorias); // Verifique se categorias é um array válido
     if (nome.length < 3) {
       setErro("O nome da categoria deve ter pelo menos 3 caracteres.");
       setTimeout(() => setErro(""), 3000);
       return false;
     }
+
+    // Verifique se categorias realmente contém um array de objetos com a chave nome
     if (
       categorias.some(
-        (categoria) => categoria.nome.toLowerCase() === nome.toLowerCase()
+        (categoria) =>
+          categoria &&
+          categoria.nome &&
+          categoria.nome.toLowerCase() === nome.toLowerCase()
       )
     ) {
       setErro("Já existe uma categoria com esse nome.");
       setTimeout(() => setErro(""), 3000);
       return false;
     }
+
     setErro(""); // Limpa a mensagem de erro se o nome for válido
     return true;
   };
