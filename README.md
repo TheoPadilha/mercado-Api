@@ -120,6 +120,6 @@ Ao realizar uma compra, o sistema:
 
 **Theo Padilha**  
 Desenvolvedor Full Stack  
-[LinkedIn](https://www.linkedin.com/in/theopadilha)  
+[LinkedIn](https://www.linkedin.com/in/theo-padilha)  
 [GitLab](https://gitlab.com/TheoPadilha)  
 [GitHub](https://github.com/TheoPadilha)
