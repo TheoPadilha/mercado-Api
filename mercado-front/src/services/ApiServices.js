@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000"; // URL do seu backend
+const API_URL = import.meta.env.VITE_API_URL;
 
 // Funções para Clientes
 export const getClientes = async () => {
