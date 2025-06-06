@@ -8,6 +8,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "node --watch .",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
